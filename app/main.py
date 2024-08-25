@@ -1,4 +1,3 @@
-#comentario
 import joblib
 import numpy as np
 import io
