@@ -1,12 +1,13 @@
+# predecir_propina.py
 import streamlit as st
 import requests
 
-# Configuración de la página
+# Diseño página
 st.set_page_config(
     layout="centered",
 )
 
-# Estilos personalizados para fondo amarillo tenue, fuente en negro
+# Estilos personalizados para el fondo y los colores de texto
 st.markdown(
     """
     <style>
@@ -75,7 +76,7 @@ st.markdown(
 st.markdown('<div class="custom-title">New York City Taxi Association</div>', unsafe_allow_html=True)
 st.markdown('<div class="custom-subheader">Predicción de Propina según su viaje</div>', unsafe_allow_html=True)
 
-# Descripción
+
 description = "Datos requeridos:"
 st.write(description)
 
@@ -140,7 +141,7 @@ with col3:
         options=[round(x * 0.1, 1) for x in range(0, 11)]
     )
 
-# Botón de predicción
+# Botón
 if st.button("Predecir Propina"):
     features = {
         "pickup_weekday": pickup_weekday,
