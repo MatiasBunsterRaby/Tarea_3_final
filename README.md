@@ -7,11 +7,10 @@
 **Nota 2: La sección #1 ha sido adaptada de las notas entregadas previamente por el profesor Alonso Astroza.**
 
 ## Índice
-
-- [1. Requisitos de ambiente](#1.-requisitos-de-ambiente)
-- [2. Ejecutar la Aplicación Localmente](#2.-ejecutar-la-aplicación-localmente)
-- [3. Despliegue en un Entorno Serverless](#3.-despliegue-en-un-entorno-serverless)
-- [4. Uso de la Aplicación](#4.-uso-de-la-aplicación)
+- [1. Requisitos de ambiente](#1-requisitos-de-ambiente)
+- [2. Ejecutar la Aplicación Localmente](#2-ejecutar-la-aplicación-localmente)
+- [3. Despliegue en un Entorno Serverless](#3-despliegue-en-un-entorno-serverless)
+- [4. Uso de la Aplicación](#4-uso-de-la-aplicación)
 
 
 ## 1. Requisitos de ambiente
