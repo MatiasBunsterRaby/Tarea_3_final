@@ -53,7 +53,7 @@ st.markdown(
         color: blue;
         text-align: center;
         font-family: 'Helvetica', sans-serif;
-        margin-top: 20px;  /* Ajuste del margen superior */
+        margin-top: 20px;  
     }
     .custom-subheader {
         font-size: 24px;
@@ -72,7 +72,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Título y subtítulo utilizando HTML para el estilo personalizado
+# Título y subtítulo utilizando HTML
 st.markdown('<div class="custom-title">New York City Taxi Association</div>', unsafe_allow_html=True)
 st.markdown('<div class="custom-subheader">Predicción de Propina según su viaje</div>', unsafe_allow_html=True)
 
@@ -80,7 +80,7 @@ st.markdown('<div class="custom-subheader">Predicción de Propina según su viaj
 description = "Datos requeridos:"
 st.write(description)
 
-# Layout en tres columnas y alineación de los inputs
+# Layout 
 col1, col2, col3 = st.columns([1, 1, 1])
 
 with col1:
@@ -132,8 +132,8 @@ with col3:
     )
     RatecodeID = st.number_input(
     "Código de Tarifa (1-7)", 
-    min_value=1,  # Cambié min_value a 1 porque mencionas que es un rango de 1 a 7
-    max_value=7,  # Fijar el límite superior en 7
+    min_value=1,
+    max_value=7,
     step=1
 )
     confidence = st.selectbox(
@@ -174,7 +174,7 @@ if st.button("Predecir Propina"):
     else:
         st.error(f"Error: {response.status_code}")
 
-# Texto en la parte inferior derecha
+# Texto referencia
 st.markdown(
     '<div class="footer-text">Alumno: J. Matías Bunster Raby<br>UDD/ Magister en Datascience</div>',
     unsafe_allow_html=True

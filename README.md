@@ -80,7 +80,7 @@ La estructura de las carpetas y archivos clonados es similar a la siguiente:
 * Navegue hacia 'Tarea_3_final' y verifique que su contenido es similar al indicado en la imágen.
 
 
-
+# .
 ### 2. Ejecutar la Aplicación Localmente
 
 ### 2.1 Iniciar el Backend con FastAPI
@@ -117,21 +117,23 @@ uvicorn app.main:app --reload
 
 ### 2.2 Iniciar la Interfaz de Usuario con Streamlit
 
-* El frontend está definido en el archivo predecir_propina.py dentro de la carpeta app.
+* El frontend está definido en el archivo 'predecir_propina.py' dentro de la carpeta 'app'.
 
 ```bash
 streamlit run app/predecir_propina.py
 ```
+
 * La interfaz se abrirá en su navegador en http://localhost:8501. Ingrese a su browser, abra una página nueva, y pegue esta  dirección. Verá la siguiente página. Ingrese datos y haga click en 'Predecir Propina'.
 
 <img src="assets/fastapi_6.png" alt="Descripción de la imagen" style="width:800%;">
 
 
-
+# .
 ### 3. Despliegue en un Entorno Serverless
 
 ### 3.1 Configuración de Modal
 #### Crear una cuenta en Modal
+
 * En su browser vaya a https://modal.com/, cree una cuenta (si es que aún no lo ha hecho).
 
 #### Instalar el cliente de Modal
@@ -141,11 +143,13 @@ streamlit run app/predecir_propina.py
 ```bash
 pip install modal
 ```
+
 * Inicie sesión en Modal
 
 ```bash
 modal token set <tu-token>
 ```
+
 ### 3.2 Desplegar la Apicación con FastAPI
 
 #### Desplegar el backend con FastAPI
@@ -175,6 +179,7 @@ streamlit run app/predecir_propina.py
 * Local: Acceda a http://localhost:8501 para utilizar la aplicación.
 * Remoto: Acceda al URL proporcionado por Modal para interactuar con la aplicación en el entorno serverless
 
+# .
 ### 4. Uso de la Aplicación
 
 * Ingresar Datos: Introduca los detalles del viaje en los campos que se muestran.
