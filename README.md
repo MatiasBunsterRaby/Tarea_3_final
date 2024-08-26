@@ -6,7 +6,13 @@
 
 **Nota 2: La sección #1 ha sido adaptada de las notas entregadas previamente por el profesor Alonso Astroza.**
 
-### Poner aquí un índice/directorio ***
+## Índice
+
+- [1. Requisitos de ambiente](#1.-requisitos-de-ambiente)
+- [2. Ejecutar la Aplicación Localmente](#2.-ejecutar-la-aplicación-localmente)
+- [3. Despliegue en un Entorno Serverless](#3.-despliegue-en-un-entorno-serverless)
+- [4. Uso de la Aplicación](#4.-uso-de-la-aplicación)
+
 
 ## 1. Requisitos de ambiente
 
@@ -344,7 +350,7 @@ Una vez que guardamos los cambios, usamos git para hacer push con los mismos com
 uvicorn app.main:app --reload
 ```
 
-El backend se ejecutará en http://127.0.0.1:8000. Ingrese a su browser, abra una página nueva, y pegue la dirección http://127.0.0.1:8000.
+El backend se ejecutará en http://127.0.0.1:8000. Ingrese a su browser, abra una página nueva, y navegue a la dirección http://127.0.0.1:8000.
 
 ### 2.2 Iniciar la Interfaz de Usuario con Streamlit
 
@@ -365,7 +371,7 @@ streamlit run app/predecir_propina.py
 
 #### Instalar el cliente de Modal
 
-* Estando en su ambiente credao con conda, ejecute el siguiente comando:
+* Estando en su ambiente creado con conda, ejecute el siguiente comando:
 
 ```bash
 pip install modal
@@ -406,7 +412,7 @@ streamlit run app/predecir_propina.py
 
 ### 4. Uso de la Aplicación
 
-* Ingresar Datos: Introduce los detalles del viaje en los campos proporcionados.
-* Predecir Propina: Haz clic en el botón Predecir Propina para obtener una predicción.
+* Ingresar Datos: Introduca los detalles del viaje en los campos que se muestran.
+* Predecir Propina: Haga clic en el botón Predecir Propina para obtener una predicción.
 * Resultados: La predicción se mostrará en una caja de color indicando si la predicción es que se recibirá una propina Alta o si se recibirá una propina Baja.
 
