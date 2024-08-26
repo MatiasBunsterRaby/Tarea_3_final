@@ -72,9 +72,13 @@ git clone https://github.com/MatiasBunsterRaby/Tarea_3_final.git
 
 * Esto descargará una copia completa del repositorio en su máquina local en una carpeta llamada 'Tarea_3_final'.
 
-La estructura de archivos es la siguiente:
+La estructura de las carpetas y archivos clonados es similar a la siguiente:
 
 <img src="assets/estructura.png" alt="Descripción de la imagen" style="width:40%;">
+
+
+* Navegue hacia 'Tarea_3_final' y verifique que su contenido es similar al indicado en la imágen.
+
 
 
 ### 2. Ejecutar la Aplicación Localmente
@@ -88,7 +92,36 @@ La estructura de archivos es la siguiente:
 uvicorn app.main:app --reload
 ```
 
-El backend se ejecutará en http://127.0.0.1:8000. Ingrese a su browser, abra una página nueva, y navegue a la dirección http://127.0.0.1:8000.
+* El backend se ejecutará en http://127.0.0.1:8000. Ingrese a su browser, abra una página nueva, y navegue a la dirección http://127.0.0.1:8000 y luego a http://localhost:8000/docs.
+
+
+<img src="assets/fastapi_1.png" alt="Descripción de la imagen" style="width:60%;">
+
+* Haga click en 'POST' y luego en 'Try it out'
+
+<img src="assets/fastapi_2.png" alt="Descripción de la imagen" style="width:60%;">
+
+* Ingresese el umbral de confianza en 'confidence'. Pruebe con 0.6
+
+<img src="assets/fastapi_3.png" alt="Descripción de la imagen" style="width:60%;">
+
+* En la sección 'Request body', ingrese valores para cada uno de los datos que se piden. Puede probar con:
+
+'{
+    "pickup_weekday": 2,
+    "pickup_hour": 14,
+    "work_hours": 1,
+    "pickup_minute": 30,
+    "passenger_count": 2,
+    "trip_distance": 3.5,
+    "trip_time": 15,
+    "trip_speed": 14,
+    "PULocationID": 45,
+    "DOLocationID": 78,
+    "RatecodeID": 1
+}' 
+
+
 
 ### 2.2 Iniciar la Interfaz de Usuario con Streamlit
 
