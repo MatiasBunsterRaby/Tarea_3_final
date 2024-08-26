@@ -110,7 +110,7 @@ uvicorn app.main:app --reload
 <img src="assets/fastapi_4.png" alt="Descripción de la imagen" style="width:80%;">
  
 * Luego de ingresar los datos, muévase hacia abajo y presione 'Execute' (dos veces si es necesario).
-* más abajo podrá ver el resultado de la predicción (0 ó 1):
+* más abajo podrá ver el resultado de la predicción (0 ó 1), en 'Predicted_Class':
 
 <img src="assets/fastapi_5.png" alt="Descripción de la imagen" style="width:100%;">
 
@@ -122,7 +122,9 @@ uvicorn app.main:app --reload
 ```bash
 streamlit run app/predecir_propina.py
 ```
-* La interfaz se abrirá en su navegador en http://localhost:8501. Ingrese a su browser, abra una página nueva, y pegue esta  dirección.
+* La interfaz se abrirá en su navegador en http://localhost:8501. Ingrese a su browser, abra una página nueva, y pegue esta  dirección. Verá la siguiente página. Ingrese datos y haga click en 'Predecir Propina'.
+
+<img src="assets/fastapi_6.png" alt="Descripción de la imagen" style="width:800%;">
 
 
 
