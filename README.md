@@ -73,22 +73,9 @@ git clone https://github.com/MatiasBunsterRaby/Tarea_3_final.git
 * Esto descargará una copia completa del repositorio en su máquina local en una carpeta llamada 'Tarea_3_final'.
 
 La estructura de archivos es la siguiente:
-![Estructura de Carpetas](assets/estructura.png)
-<img src="assets/estructura.png" alt="Descripción de la imagen" style="width:30%;">
 
+<img src="assets/estructura.png" alt="Descripción de la imagen" style="width:40%;">
 
-
-Para comenzar deben haber bajado todos los archivos a una carpeta y en el terminal de Anaconda llegar a ese directorio.
-
-```
-.
-└── producto-datos-lab (este directorio)
-    ├── model (acá irán nuestros modelos)
-    ├── 00_nyc-taxi-model.ipynb
-    ├── 01_server.ipynb
-    ├── 02_client.ipynb
-    └── requirements.txt (dependencias de Python)
-```
 
 ### 2. Ejecutar la Aplicación Localmente
 
