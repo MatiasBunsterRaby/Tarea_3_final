@@ -1,10 +1,12 @@
-# Elaboración de una API (Fastapi), despliegue en nube (Modal) y desarrollo de interfaz cliente (Streamlit)
+# Elaboración de una API (Fastapi), despliegue en la nube (Modal) y desarrollo de interfaz cliente (Streamlit)
 
-## Descripción: Creación de una aplicación para predecir si un viaje en taxi en la ciudad de Nueva York generará una propina alta o baja al conductor basada en un conjunto de características del viaje. 
+## Descripción: Creación de una aplicación para predecir si un viaje en taxi en la ciudad de Nueva York generará una propina alta o baja para el conductor, basada en un conjunto de características del viaje. 
 
-**Nota: Este Laboratorio está inspirado en la unidad 1 del curso [Introduction to Machine Learning in Production (DeepLearning.AI)](https://www.coursera.org/learn/introduction-to-machine-learning-in-production/home/welcome). También se apoya en código para generar el modelo disponible en [este repositorio de Shreya Shankar](https://github.com/shreyashankar/debugging-ml-talk) e implementar un flujo de trabajo usando Github Actions de la [Unidad 4 del curso mencionado anteriormente](https://github.com/jesussantana/DeepLearning.AI-Introduction-to-Machine-Learning-in-Production).**
+**Nota 1: Este Laboratorio está inspirado en la unidad 1 del curso [Introduction to Machine Learning in Production (DeepLearning.AI)](https://www.coursera.org/learn/introduction-to-machine-learning-in-production/home/welcome). También se apoya en código para generar el modelo disponible en [este repositorio de Shreya Shankar](https://github.com/shreyashankar/debugging-ml-talk) e implementar un flujo de trabajo usando Github Actions de la [Unidad 4 del curso mencionado anteriormente](https://github.com/jesussantana/DeepLearning.AI-Introduction-to-Machine-Learning-in-Production).**
 
-*** Poner aquí un índice/directorio ***
+**Nota 2: La sección #1 ha sido adaptada de las notas entregadas previamente por el profesor Alonso Astroza.**
+
+### Poner aquí un índice/directorio ***
 
 ## 1. Requisitos de ambiente
 
