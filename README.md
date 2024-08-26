@@ -92,7 +92,7 @@ La estructura de las carpetas y archivos clonados es similar a la siguiente:
 uvicorn app.main:app --reload
 ```
 
-* El backend se ejecutará en http://127.0.0.1:8000. Ingrese a su browser, abra una página nueva, y navegue a la dirección http://127.0.0.1:8000 y luego a http://localhost:8000/docs.
+* El backend se ejecutará en http://127.0.0.1:8000. Ingrese a su browser, abra una página nueva, y navegue a la dirección  http://localhost:8000/docs.
 
 
 <img src="assets/fastapi_1.png" alt="Descripción de la imagen" style="width:100%;">
@@ -101,15 +101,18 @@ uvicorn app.main:app --reload
 
 <img src="assets/fastapi_2.png" alt="Descripción de la imagen" style="width:100%;">
 
-* Ingresese el umbral de confianza en 'confidence'. Pruebe con 0.6
+* Ingresese el umbral de confianza en 'confidence'. Pruebe con 0.5
 
 <img src="assets/fastapi_3.png" alt="Descripción de la imagen" style="width:100%;">
 
 * En la sección 'Request body', ingrese valores para cada uno de los datos que se piden. Puede probar con:
 
-<img src="assets/fastapi_4.png" alt="Descripción de la imagen" style="width:100%;">
+<img src="assets/fastapi_4.png" alt="Descripción de la imagen" style="width:80%;">
  
+* Luego de ingresar los datos, muévase hacia abajo y presione 'Execute' (dos veces si es necesario).
+* más abajo podrá ver el resultado de la predicción (0 ó 1):
 
+<img src="assets/fastapi_5.png" alt="Descripción de la imagen" style="width:100%;">
 
 
 ### 2.2 Iniciar la Interfaz de Usuario con Streamlit
