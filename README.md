@@ -74,6 +74,8 @@ git clone https://github.com/MatiasBunsterRaby/Tarea_3_final.git
 
 La estructura de archivos es la siguiente:
 ![Estructura de Carpetas](assets/estructura.png)
+<img src="assets/estructura.png" alt="Descripción de la imagen" style="width:30%;">
+
 
 
 Para comenzar deben haber bajado todos los archivos a una carpeta y en el terminal de Anaconda llegar a ese directorio.
