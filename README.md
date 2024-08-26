@@ -1,10 +1,12 @@
 # Elaboración de una API (Fastapi), despliegue en nube (Modal) y desarrollo de interfaz cliente (Streamlit)
 
-## Generación de una aplicación para predecir si un viaje en taxi en la ciudad de Nueva York generará una propina alta o baja al conductor. 
+## Descripción: Creación de una aplicación para predecir si un viaje en taxi en la ciudad de Nueva York generará una propina alta o baja al conductor basada en un conjunto de características del viaje. 
 
 **Nota: Este Laboratorio está inspirado en la unidad 1 del curso [Introduction to Machine Learning in Production (DeepLearning.AI)](https://www.coursera.org/learn/introduction-to-machine-learning-in-production/home/welcome). También se apoya en código para generar el modelo disponible en [este repositorio de Shreya Shankar](https://github.com/shreyashankar/debugging-ml-talk) e implementar un flujo de trabajo usando Github Actions de la [Unidad 4 del curso mencionado anteriormente](https://github.com/jesussantana/DeepLearning.AI-Introduction-to-Machine-Learning-in-Production).**
 
+*** Poner aquí un índice/directorio ***
 
+## 1. Requisitos de ambiente
 
 Para comenzar deben haber bajado todos los archivos a una carpeta y en el terminal de Anaconda llegar a ese directorio.
 
@@ -19,13 +21,13 @@ Para comenzar deben haber bajado todos los archivos a una carpeta y en el termin
 ```
  
  
-## Pasos previos usando Conda
+### 1.1 Pasos previos usando Conda
  
-### Prerequisito: Tener [conda](https://docs.conda.io/en/latest/) instalado en tu computador.
+#### Prerequisito: Tener [conda](https://docs.conda.io/en/latest/) instalado en tu computador.
  
 Vamos a usar Conda para construir un entorno virtual nuevo.
  
-### 1. Creando el entorno virtual (Virtual Environment)
+### 1.2 Creando el entorno virtual (Virtual Environment)
  
 Asumiremos que tenemos instalado conda. El primer paso es crear un nuevo enviroment para desarrollar. Para crear uno usando Python 3.8 debemos ejecutar el siguiente comando:
  
@@ -41,7 +43,7 @@ conda activate producto-datos-lab
  
 Todo el trabajo que realicemos con este código será en este entorno. Así que al trabajarcon estos archivos siempre tiene que estar activo el `producto-datos-lab`.
  
-### 2. Instalando las dependencias usando PIP 
+### 1.3 Instalando las dependencias usando PIP 
  
 Antes de seguir, verifica que en el terminal de Anaconda estés dentro del directorio `producto-datos-lab`, el cual incluye el archivo `requirements.txt`. Este archivo enlista todas las dependencias necesarias y podemos usarlo para instalarlas todas:
  
@@ -57,8 +59,8 @@ Luego debemos enlazar el kernel de jupyter lab a nuestro nuevo enviroment:
 python -m ipykernel install --user --name producto-datos-lab
 ```
 
- 
-### 3. Iniciando Jupyter Lab
+
+### 1.4 Iniciando Jupyter Lab
  
 Jupyter lab debería haber quedado instalado en el paso anterior, así que basta con escribir:
 
@@ -66,17 +68,16 @@ Jupyter lab debería haber quedado instalado en el paso anterior, así que basta
 jupyter lab
 ```
 
-### 4. Generando modelo de ML
+### 1.5 Generando modelo de ML
 
 El notebook que genera el modelo se puede ejecutar en su totalidad desde [Google Colab](https://colab.research.google.com/drive/1CajYNrge3sAdV7Tc6YDvbB6fVqIP2qsJ?usp=sharing).
 
 
-## Agregando pipelines de CI/CD usando GitHub Actions
+## 1.6 Agregando pipelines de CI/CD usando GitHub Actions
 
 En este laboratorio también usaremos [GitHub Actions](https://github.com/features/actions) para automatizar flujos de trabajo de Machine Learning. Además haremos un test unitario simple usando [pytest](https://docs.pytest.org/en/6.2.x/) para evaluar cambios en el código antes de publicar a producción.
 
 Para esta parte debemos hacer un [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) de este repositorio para que podamos correr las GH actions en nuestra propia copia del repositorio.
-
 
 
 ### ¿Qué es GH Actions?
@@ -86,7 +87,7 @@ Es una herramienta sensacional que permite definir flujos de trabajo automático
 Vamos a preparar una acción que corra test unitarios definidos en el código cada vez que mandemos cambios al repositorio remoto.
 
 
-### Fork el repositorio público
+### 1.7 Fork el repositorio público
 
 Hacer fork a un repositorio es simplemente crear una versión propia de este. Se usa bastante en el desarrollo de software Open Source para organizar una forma de trabajar colaborativamente. En vez de usar el mismo repositorio público (en el que probablemente no se tenga acceso de escritura) se puede trabajar en el fork y mandar Pull Requests desde ahí. Para hacer un fork de este repo sólo se debe clickear en el botón `Fork` en la esquina superior derecha:
 
@@ -99,7 +100,7 @@ Una vez que el proceso de fork haya terminado, deberíamos tener una copia del r
 Ahora necesitamos clonarlo a nuestra máquina local. Se puede hacer mediante [GitHub Desktop](https://desktop.github.com/) o usando este comando (ojo que hay que reemplazar el username por el propio):
 
 ```bash
-git clone https://github.com/your-username/producto-datos-lab.git
+git clone https://github.com/MatiasBunsterRaby/Tarea_3_final
 ```
 
 Ahora hay que habilitar las Actions en el fork. Se puede hacer haciendo click en el botón Actions:
@@ -235,7 +236,7 @@ Ahora que entendemos de mejor forma lo que hace un GH Action, podemos ponerlas a
 
 Dentro del directorio `app` hay una copia del programa servidor que entrega predicciones sobre los viajes en taxi. El código se encarga de cargar el clasificador en el estado global incluso antes de comenzar el server. Esto es porque queremos hacer test unitarios antes de comenzar siquiera el servicio.
 
-#### Test unitario con pytest
+#### 1.7 Test unitario con pytest
 
 Para realizar el test unitario usaremos la biblioteca `pytest`. Para usarla debemos poner nuestros test en scripts de Python donde el nombre de archivo empiece por el prefijo `test_`, en este caso se llama `test_rfc.py` ya que probaremos el desempeño del clasificador Random Forest. 
 
@@ -286,7 +287,7 @@ Hay solo una prueba unitaria definida en el método `test_accuracy`. Esta funci�
 
 Si el f1-score es mayor a 0.7 la prueba se pasa exitosamente. De otra forma, falla.
 
-### Corriendo la GitHub Action
+### 1.8 Corriendo la GitHub Action
 
 Para correr el test unitario usando el pipeline CI/CD necesitamos hacer cambios en el repositorio remoto, específicamente en el directorio `app/`. Para hacer esto, **agreguemos un comentario dentro del archivo `main.py` y guardemos los cambios**.
 
@@ -330,5 +331,80 @@ Una vez que guardamos los cambios, usamos git para hacer push con los mismos com
 - `git commit -m "Adding new test data"`
 - `git push origin main`
 
-¿Qué es lo que ocurre? ¿Cómo podríamos solucionarlo?
+### 2. Ejecutar la Aplicación Localmente
+
+### 2.1 Iniciar el Backend con FastAPI
+
+* El backend está definido en el archivo 'main.py' dentro de la carpeta 'app'.
+* Para ejecutarlo se debe ejecutar el siguiente comando en el command prompt:
+
+```bash
+uvicorn app.main:app --reload
+```
+
+El backend se ejecutará en http://127.0.0.1:8000. Ingrese a su browser, abra una página nueva, y pegue la dirección http://127.0.0.1:8000.
+
+### 2.2 Iniciar la Interfaz de Usuario con Streamlit
+
+* El frontend está definido en el archivo predecir_propina.py dentro de la carpeta app.
+
+```bash
+streamlit run app/predecir_propina.py
+```
+* La interfaz se abrirá en su navegador en http://localhost:8501. Ingrese a su browser, abra una página nueva, y pegue esta  dirección.
+
+
+
+### 3. Despliegue en un Entorno Serverless
+
+### 3.1 Configuración de Modal
+#### Crear una cuenta en Modal
+* En su browser vaya a https://modal.com/, cree una cuenta (si es que aún no lo ha hecho).
+
+#### Instalar el cliente de Modal
+
+* Estando en su ambiente credao con conda, ejecute el siguiente comando:
+
+```bash
+pip install modal
+```
+* Inicie sesión en Modal
+
+```bash
+modal token set <tu-token>
+```
+### 3.2 Desplegar la Apicación con FastAPI
+
+#### Desplegar el backend con FastAPI
+
+* Desde la raíz del proyecto ejecute el siguiente comando:
+
+```bash
+modal deploy app/modal_app.py
+```
+
+* Esto generará un URL proporcionado por Modal para acceder al backend.
+
+#### Actualizar el Frontend para Usar el URL de Modal
+
+* Edite el archivo app/predecir_propina.py y reemplaze la línea que contiene requests.post("https://matiasbunsterraby--nyc-taxi-tip-prediction-fastapi-app.modal.run/predict" con el nuevo URL generado.
+
+#### Iniciar el Frontend
+
+* Luego de actualizar el archivo 'predecir_propina.py' con el URL, ejecute el siguiente comando:
+
+```bash
+streamlit run app/predecir_propina.py
+```
+
+### 3.3 Acceso y uso
+
+* Local: Acceda a http://localhost:8501 para utilizar la aplicación.
+* Remoto: Acceda al URL proporcionado por Modal para interactuar con la aplicación en el entorno serverless
+
+### 4. Uso de la Aplicación
+
+* Ingresar Datos: Introduce los detalles del viaje en los campos proporcionados.
+* Predecir Propina: Haz clic en el botón Predecir Propina para obtener una predicción.
+* Resultados: La predicción se mostrará en una caja de color indicando si la predicción es que se recibirá una propina Alta o si se recibirá una propina Baja.
 
